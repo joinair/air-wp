@@ -44,6 +44,7 @@ function showcase_scripts_styles() {
 
 	if ( is_front_page() ) {
 		wp_enqueue_style( 'bxslider', get_stylesheet_directory_uri() . '/css/bxslider.css' );
+		wp_enqueue_style( 'footer', get_stylesheet_directory_uri() . '/css/footer.css' );
 		wp_enqueue_script( 'showcase-bxslider', get_stylesheet_directory_uri() . '/js/jquery.bxslider.min.js', array(), CHILD_THEME_VERSION );
 	}
 
@@ -352,16 +353,16 @@ function defer_js_async($tag){
 $scripts_to_defer = array('min.js', 'skip-links.js', 'jquery.fitvids.js', 'global.js', 'contact-form-7', 'responsive-menu.js');
 ## 2: list of scripts to async.
 $scripts_to_async = array();
- 
+
 #defer scripts
 foreach($scripts_to_defer as $defer_script){
 	if(true == strpos($tag, $defer_script ) )
-	return str_replace( ' src', ' defer="defer" src', $tag );	
+	return str_replace( ' src', ' defer="defer" src', $tag );
 }
 #async scripts
 foreach($scripts_to_async as $async_script){
 	if(true == strpos($tag, $async_script ) )
-	return str_replace( ' src', ' async="async" src', $tag );	
+	return str_replace( ' src', ' async="async" src', $tag );
 }
 return $tag;
 }

@@ -136,6 +136,8 @@
   list-style: none;
   margin: 0;
   padding: 0;
+  margin-left: -10px;
+  margin-right: -10px;
 }
 
 .AirPricing-visibleInfo ul li,
@@ -168,6 +170,8 @@
 }
 .AirPricing-details ul li ul {
   margin-top: 5px;
+  margin-left: 0;
+  margin-right: 0;
   margin-bottom: 20px !important;
   border-width: 0;
   padding-top: 0;

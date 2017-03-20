@@ -175,7 +175,6 @@ h6,
 
 h6,
 .entry-meta,
-.nav-primary .genesis-nav-menu a,
 .comment-meta,
 .widgettitle {
 	text-transform: uppercase;
@@ -1515,25 +1514,25 @@ img.stretch {
 }
 
 .genesis-nav-menu .menu-item.highlight-solid a {
-	background-color: #FF854A;
+	background-color: #3EC961;
 	border: 0px solid rgba(255,255,255,0.5);
 	border-radius: 4px;
 	color: #fff!important;
 }
 
-.genesis-nav-menu .menu-item.highlight-solid.green a {
-	background-color: #3ECA61;
+.genesis-nav-menu .menu-item.highlight-solid a:hover {
+	background-color: #60D67E;
 }
 
 .genesis-nav-menu .menu-item.highlight a {
-	border: 1px solid #4D4D4D;
-	color: #4D4D4D;
+	border: 1px solid #64ADF5;
+	color: #64ADF5;
 	border-radius: 4px;
 }
 
 .genesis-nav-menu .menu-item.highlight a:hover {
-	color: #4D4D4D;
-	background-color: #FAFAFA;
+	color: white;
+	background-color: #64ADF5;
 }
 
 .genesis-nav-menu .menu-item.highlight a, .genesis-nav-menu .menu-item.highlight-solid a {
@@ -1541,18 +1540,14 @@ img.stretch {
 	padding: 8px 10px;
 }
 
-.genesis-nav-menu .menu-item.highlight-solid a:hover {
-	background-color: #FD9E62;
-}
-
 @media only screen and (min-width: 800px) {
 	.genesis-nav-menu .menu-item.highlight a, .genesis-nav-menu .menu-item.highlight-solid a {
 		line-height: 1;
-		margin: 0 15px;
+		margin: 0 8px;
 	}
 
 	.nav-primary .genesis-nav-menu a {
-		font-size: 14px;
+		font-size: 16px;
 	}
 
 	.nav-primary .genesis-nav-menu a:hover {
@@ -1586,7 +1581,7 @@ img.stretch {
 
 	.nav-primary .genesis-nav-menu > li > a {
 		margin: -2px 0 0 25px;
-		font-size: 14px;
+		font-size: 17px;
 	}
 }
 

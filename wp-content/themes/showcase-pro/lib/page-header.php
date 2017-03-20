@@ -83,6 +83,14 @@ function showcase_closing_page_header() {
 						echo '<h1>' . get_the_title($posts_page_id) . '</h1>';
 						remove_action( 'genesis_before_loop', 'genesis_do_posts_page_heading' );
 
+					} elseif ( is_page_template( 'page_pricing.php' ) ) {
+
+						echo '<h1 style="text-align: center;">Pricing Guide</h1>';
+						echo '<p style="text-align: center;">Every account starts with a 30 day free trial with unlimited features.</p>';
+
+						//* Remove the entry title (requires HTML5 theme support)
+						remove_action( 'genesis_entry_header', 'genesis_do_post_title' );
+
 					} else {
 
 						if ( is_singular() && !is_page_template( 'page_blog.php' ) ) {

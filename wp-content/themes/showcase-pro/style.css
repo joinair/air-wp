@@ -1582,6 +1582,7 @@ img.stretch {
 	.nav-primary .genesis-nav-menu > li > a {
 		margin: -2px 0 0 25px;
 		font-size: 17px;
+		line-height: 17px;
 	}
 }
 
@@ -1877,7 +1878,7 @@ body.single-post .with-background-image:after {
  * ========================================================================== */
 
 .before-footer {
-  padding: 40px 0;
+  padding: 30px 0;
   color: #ffffff;
   background: #ffb151; /* Old browsers */
   background: -moz-linear-gradient(left bottom, right top,  #ffb151 0%, #ff8769 100%); /* FF3.6-15 */
@@ -1891,7 +1892,7 @@ body.single-post .with-background-image:after {
 @media only screen and ( min-width: 800px ) {
 
   .before-footer {
-    padding: 60px 0;
+    padding: 40px 0;
   }
 
   .before-footer .enews form {

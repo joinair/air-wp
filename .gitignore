@@ -5,6 +5,8 @@
 *.bak
 *.swp
 Thumbs.db
+preview.sh
+Session.vim
 
 # wordpress specific
 wp-config.php

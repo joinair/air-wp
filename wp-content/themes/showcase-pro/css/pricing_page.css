@@ -1,0 +1,284 @@
+.AirPricingPage .page-header {
+  background: white;
+  color: #4D4D4D;
+}
+.AirPricingPage .header-wrap:after {
+  background: white !important;
+}
+
+.AirPricing-column {
+  text-align: center;
+  margin: 0;
+}
+
+.AirPricing-column .vc_column-inner {
+  padding: 0 !important;
+}
+
+.AirPricing-column--left {
+  margin-top: 15px;
+  padding-left: 6px !important;
+}
+
+.AirPricing-column--right {
+  margin-top: 15px;
+  padding-right: 6px !important;
+}
+
+.AirPricing-header {
+  height: 290px;
+  padding: 28px 20px 25px 20px;
+  background: linear-gradient(to right, #3EC961, #71F079);
+  border-radius: 4px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  color: white;
+  margin-bottom: 0 !important;
+}
+
+.AirPricing-column--left .AirPricing-header {
+  height: 275px;
+  border-top-right-radius: 0;
+  background: linear-gradient(to right, #64ADF5, #90C8FF);
+}
+
+.AirPricing-column--right .AirPricing-header {
+  height: 275px;
+  border-top-left-radius: 0;
+  background: linear-gradient(to right, #FF8769, #FFB151);
+}
+
+.AirPricing-title {
+  font-size: 20px;
+  line-height: 28px;
+  margin-bottom: 24px;
+}
+
+.AirPricing-price {
+  margin-bottom: 20px;
+  height: 54px;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.AirPricing-price-sign, .AirPricing-price-amount {
+  display: inline-block;
+}
+
+.AirPricing-price-sign {
+  font-size: 24px;
+  line-height: 30px;
+  vertical-align: top;
+}
+
+.AirPricing-price-amount {
+  font-size: 78px;
+  line-height: 54px;
+  vertical-align: top;
+  font-weight: bold;
+}
+
+.AirPricing-priceDescription {
+  margin-bottom: 30px;
+  font-size: 13px;
+  line-height: 17px;
+}
+
+.AirPricing-link {
+  display: block;
+  text-decoration: none;
+  border-radius: 4px;
+  background-color: white;
+  color: #71F079;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: 47px;
+  line-height: 47px;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.AirPricing-column--left .AirPricing-link {
+  color: #64ADF5;
+}
+.AirPricing-column--right .AirPricing-link {
+  color: #FFB151;
+}
+
+.AirPricing-visibleInfo, .AirPricing-details {
+  margin-bottom: 0;
+  text-align: left;
+  padding: 13px 30px;
+  font-size: 17px;
+  line-height: 26px;
+  border: 4px solid #DEDEDE;
+  border-width: 0 4px 0 4px;
+  margin-bottom: 0 !important;
+}
+.AirPricing-column--right .AirPricing-visibleInfo,
+.AirPricing-column--right .AirPricing-details {
+  border-width: 0 2px 0 0;
+}
+.AirPricing-column--left .AirPricing-visibleInfo,
+.AirPricing-column--left .AirPricing-details {
+  border-width: 0 0 0 2px;
+}
+
+.AirPricing-visibleInfo p,
+.AirPricing-details p {
+  padding: 0;
+  margin: 0;
+}
+
+.AirPricing-visibleInfo ul,
+.AirPricing-details ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.AirPricing-visibleInfo ul li,
+.AirPricing-details ul li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 5px;
+  position: relative;
+  padding-left: 30px;
+}
+
+.AirPricing-visibleInfo ul li img,
+.AirPricing-details ul li img {
+  position: absolute;
+  top: 3px;
+  left: 0;
+}
+
+.AirPricing-visibleInfo ul {
+  margin-top: 20px;
+}
+
+.AirPricing-details ul {
+  border-top: 1px solid #DEDEDE;
+  padding-top: 20px;
+}
+.AirPricing-details li img {
+  margin-bottom: 0;
+}
+.AirPricing-details ul li ul {
+  margin-top: 5px;
+  margin-bottom: 20px !important;
+  border-width: 0;
+  padding-top: 0;
+}
+.AirPricing-details li ul li {
+  font-size: 13px;
+  line-height: 17px;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  margin-left: -30px;
+  padding-left: 30px;
+}
+.AirPricing-details li ul li img {
+  left: 3px;
+}
+.AirPricing-details {
+  display: none;
+}
+
+.AirPricing-togglerContainer {
+  padding: 0;
+}
+
+.AirPricing-detailsFooter {
+  border: 4px solid #DEDEDE;
+  border-width: 0 4px 4px 4px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  height: 4px;
+}
+.AirPricing-column--left .AirPricing-detailsFooter {
+  border-width: 0 0 2px 2px;
+  border-bottom-right-radius: 0;
+}
+.AirPricing-column--right .AirPricing-detailsFooter {
+  border-width: 0 2px 2px 0;
+  border-bottom-left-radius: 0;
+}
+
+.AirPricing-hidden {
+  opacity: 0.2;
+}
+
+.AirPricing-seeDetails {
+  padding-bottom: 20px;
+}
+.AirPricing-seeDetails, .AirPricing-hideDetails {
+  padding-top: 7px;
+  text-align: center;
+  font-size: 13px;
+  line-height: 17px;
+  cursor: pointer;
+  color: #60D67E;
+}
+.AirPricing-seeDetails img, .AirPricing-hideDetails img {
+  vertical-align: middle;
+}
+.AirPricing-hideDetails img {
+  transform: rotateZ(180deg);
+  -webkit-transform: rotateZ(180deg);
+  -moz-transform: rotateZ(180deg);
+  -o-transform: rotateZ(180deg);
+}
+.AirPricing-column--left .AirPricing-seeDetails,
+.AirPricing-column--left .AirPricing-hideDetails {
+  color: #64ADF5;
+}
+.AirPricing-column--right .AirPricing-seeDetails,
+.AirPricing-column--right .AirPricing-hideDetails {
+  color: #FF854A;
+}
+
+.AirPricing-hideDetails {
+  display: none;
+}
+
+.AirPricing-app p {
+  margin-bottom: 0;
+  font-size: 13px;
+  line-height: 17px;
+}
+.AirPricing-app h4 {
+  margin-bottom: 4px;
+}
+.AirPricing-app p:last-child {
+  margin-top: 15px;
+}
+
+@media only screen and (max-width: 767px) {
+  .AirPricing-header {
+    border-top-left-radius: 4px !important;
+    border-top-right-radius: 4px !important;
+  }
+
+  .AirPricing-detailsFooter {
+    border-bottom-left-radius: 4px !important;
+    border-bottom-right-radius: 4px !important;
+  }
+
+  .AirPricing-column--left {
+    padding-left: 0 !important;
+  }
+  .AirPricing-column--right {
+    padding-right: 0 !important;
+  }
+
+  .AirPricing-column--left .AirPricing-visibleInfo,
+  .AirPricing-column--left .AirPricing-details,
+  .AirPricing-column--right .AirPricing-visibleInfo,
+  .AirPricing-column--right .AirPricing-details {
+    border-width: 0 2px;
+  }
+}

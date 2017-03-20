@@ -1872,6 +1872,149 @@ body.single-post .with-background-image:after {
 
 }
 
+
+/* Before Footer Widget Area
+ * ========================================================================== */
+
+.before-footer {
+  padding: 40px 0;
+  color: #ffffff;
+  background: #ffb151; /* Old browsers */
+  background: -moz-linear-gradient(left bottom, right top,  #ffb151 0%, #ff8769 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left bottom, right top,  #ffb151 0%,#ff8769 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom right,  #ffb151 0%,#ff8769 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffb151', endColorstr='#ff8769',GradientType=0 ); /* IE6-9 */
+  text-align: center;
+
+}
+
+@media only screen and ( min-width: 800px ) {
+
+  .before-footer {
+    padding: 60px 0;
+  }
+
+  .before-footer .enews form {
+    margin-left: -10px;
+    margin-right: -10px;
+    width: calc( 100% + 20px );
+  }
+
+  .before-footer .enews form input {
+    margin: 0 10px;
+    width: calc( 25% - 20px );
+    float: left;
+  }
+}
+
+.before-footer .button { 
+  display: inline-block;
+  margin: 10px;
+}
+
+/* Footer Widgets
+ * ========================================================================== */
+
+.footer-widgets {
+  padding: 60px 0 0;
+  background: #2e424d;
+  color: #fff;
+}
+
+.footer-widgets .widget-area {
+  margin-bottom: 40px;
+}
+
+.footer-widgets a:not(.button) {
+  color: #fff;
+  opacity: .5;
+}
+
+.footer-widgets a:not(.button):hover {
+  opacity: 1;
+}
+
+.footer-widgets .widgettitle {
+  opacity: 1;
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.footer-widgets .simple-social-icons ul {
+  margin-top: 10px !important;
+}
+
+.footer-widgets .simple-social-icons ul li {
+  margin: 0px 24px 12px 0 !important;
+}
+
+.footer-widgets .simple-social-icons ul li a {
+  padding: 0px !important;
+  border: 0px !important;
+}
+
+@media only screen and (min-width: 800px) {
+
+  .footer-widgets {
+    padding: 100px 0 0;
+  }
+
+  .footer-widgets .widgettitle {
+    margin-bottom: 60px;
+  }
+}
+
+
+/* Site Footer
+ * ========================================================================== */
+
+.site-footer {
+  padding: 40px 0;
+  background: #2e424d;
+  font-size: 14px;
+  text-align: center;
+  color: #fff;
+}
+
+.site-footer a {
+  color: #fff;
+  opacity: .5;
+}
+
+.site-footer a:hover {
+  opacity: 1;
+}
+
+.site-footer p {
+  margin-bottom: 0;
+}
+
+
+/* Footer newsletter subscribe form
+ * ========================================================================== */
+#footer_subscription_form {
+  margin-top: -10px;
+  margin-bottom: -50px;
+}
+
+#footer_subscription_label {
+  font-size: 15px;
+  line-height: 19px;
+  opacity: 0.6;
+  margin-bottom: 10px;
+}
+
+#footer_subscription_form .footer_subscription_button {
+  display: block;
+  padding: 8px;
+  margin-top: 10px;
+  width: 100%;
+}
+
+
 /* Pricing Table
  * ========================================================================== */
 
@@ -2354,125 +2497,6 @@ p.comment-form-comment {
 .widget-area ul li {
 	list-style-type: none;
 	margin-bottom: 16px;
-}
-
-/* Before Footer Widget Area
- * ========================================================================== */
-
-.before-footer {
-	padding: 40px 0;
-	color: #ffffff;
-	background: #ffb151; /* Old browsers */
-	background: -moz-linear-gradient(left bottom, right top,  #ffb151 0%, #ff8769 100%); /* FF3.6-15 */
-	background: -webkit-linear-gradient(left bottom, right top,  #ffb151 0%,#ff8769 100%); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(to bottom right,  #ffb151 0%,#ff8769 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffb151', endColorstr='#ff8769',GradientType=0 ); /* IE6-9 */
-	text-align: center;
-
-}
-
-@media only screen and ( min-width: 800px ) {
-
-	.before-footer {
-		padding: 60px 0;
-	}
-
-	.before-footer .enews form {
-		margin-left: -10px;
-		margin-right: -10px;
-		width: calc( 100% + 20px );
-	}
-
-	.before-footer .enews form input {
-		margin: 0 10px;
-		width: calc( 25% - 20px );
-		float: left;
-	}
-}
-
-.before-footer .button { 
-	display: inline-block;
-	margin: 10px;
-}
-
-/* Footer Widgets
- * ========================================================================== */
-
-.footer-widgets {
-	padding: 60px 0 0;
-	background: #2e424d;
-	color: #fff;
-}
-
-.footer-widgets .widget-area {
-	margin-bottom: 40px;
-}
-
-.footer-widgets a:not(.button) {
-	color: #fff;
-	opacity: .5;
-}
-
-.footer-widgets a:not(.button):hover {
-	opacity: 1;
-}
-
-.footer-widgets .widgettitle {
-	opacity: 1;
-	text-transform: none;
-	letter-spacing: 0;
-	font-weight: 600;
-	font-size: 18px;
-	margin-bottom: 30px;
-}
-
-.footer-widgets .simple-social-icons ul {
-	margin-top: 10px !important;
-}
-
-.footer-widgets .simple-social-icons ul li {
-	margin: 0px 24px 12px 0 !important;
-}
-
-.footer-widgets .simple-social-icons ul li a {
-	padding: 0px !important;
-	border: 0px !important;
-}
-
-@media only screen and (min-width: 800px) {
-
-	.footer-widgets {
-		padding: 100px 0 0;
-	}
-
-	.footer-widgets .widgettitle {
-		margin-bottom: 60px;
-	}
-}
-
-
-/* Site Footer
- * ========================================================================== */
-
-.site-footer {
-	padding: 40px 0;
-	background: #2e424d;
-	font-size: 14px;
-	text-align: center;
-	color: #fff;
-}
-
-.site-footer a {
-	color: #fff;
-	opacity: .5;
-}
-
-.site-footer a:hover {
-	opacity: 1;
-}
-
-.site-footer p {
-	margin-bottom: 0;
 }
 
 

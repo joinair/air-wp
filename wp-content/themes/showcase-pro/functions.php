@@ -43,10 +43,10 @@ function showcase_scripts_styles() {
 	wp_enqueue_script( 'showcase-responsive-menu', get_stylesheet_directory_uri() . '/js/responsive-menu.js', array(), CHILD_THEME_VERSION );
   wp_enqueue_style( 'pricing_page', get_stylesheet_directory_uri() . '/css/pricing_page.css' );
 
-	/* if ( is_front_page() ) { */
+	if ( is_front_page() ) {
 		wp_enqueue_style( 'bxslider', get_stylesheet_directory_uri() . '/css/bxslider.css' );
 		wp_enqueue_script( 'showcase-bxslider', get_stylesheet_directory_uri() . '/js/jquery.bxslider.min.js', array(), CHILD_THEME_VERSION );
-	/* } */
+	}
 
 }
 

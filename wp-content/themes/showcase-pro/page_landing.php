@@ -24,6 +24,14 @@ remove_action( 'genesis_header', 'genesis_header_markup_open', 5 );
 remove_action( 'genesis_header', 'genesis_do_header' );
 remove_action( 'genesis_header', 'genesis_header_markup_close', 15 );
 
+?>
+
+<div class="landing-header">
+	<a href="<?php echo get_home_url(); ?>" class="landing-logo"><img src="<?php echo( get_header_image() ); ?>" alt="<?php echo( get_bloginfo( 'title' ) ); ?>" width="130" height="55" /></a>
+</div>
+
+<?php
+
 //* Remove navigation
 remove_theme_support( 'genesis-menus' );
 
@@ -41,5 +49,16 @@ remove_action( 'genesis_footer', 'genesis_footer_markup_open', 5 );
 remove_action( 'genesis_footer', 'genesis_do_footer' );
 remove_action( 'genesis_footer', 'genesis_footer_markup_close', 15 );
 
+
 //* Run the Genesis loop
 genesis();
+
+?>
+
+<div class="landing-footer">
+	<h4>Build great places to work</h4>
+	<p>Smart HR software designed for small &amp; medium businesses. <a href="<?php echo get_home_url(); ?>">Learn more &rarr;</a></p>
+	<a href="<?php echo get_home_url(); ?>" class="landing-logo"><img src="<?php echo( get_stylesheet_directory_uri() ); ?>/images/air-hr-software-dashboard-people-directory.png" alt="<?php echo( get_bloginfo( 'title' ) ); ?>" width="710" height="229" /></a>
+</div>
+
+<?php

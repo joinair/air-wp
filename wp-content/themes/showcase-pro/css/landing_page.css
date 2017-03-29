@@ -1,15 +1,20 @@
 /* Landing page
  * ========================================================================== */
+.showcase-landing .content-sidebar-wrap {
+	max-width: 800px;
+}
+
 .showcase-landing .landing-header {
 	padding: 15px 0;
 	text-align: center;
 	border-bottom: 1px #EDEDED solid;
 }
 
-.showcase-landing h1.entry-title {
+.showcase-landing h1 {
 	display: block;
 	text-align: center;
     margin-bottom: 1em;
+    font-size: 50px;
 }
 
 .landing-footer {
@@ -17,4 +22,12 @@
 	text-align: center;
 	margin-top: 4%;
 	padding: 50px 15px 0 15px;
+}
+
+.showcase-landing  .landing-list-image {
+	background: no-repeat left center;
+	padding: 0px 0px 0px 50px;
+	/* reset styles (optional): */
+	list-style: none!important;
+	margin: 0 0 1em 0;
 }

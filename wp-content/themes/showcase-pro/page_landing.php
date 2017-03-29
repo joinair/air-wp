@@ -23,6 +23,7 @@ function showcase_add_body_class( $classes ) {
 remove_action( 'genesis_header', 'genesis_header_markup_open', 5 );
 remove_action( 'genesis_header', 'genesis_do_header' );
 remove_action( 'genesis_header', 'genesis_header_markup_close', 15 );
+remove_action( 'genesis_entry_header', 'genesis_do_post_title' );
 
 ?>
 

@@ -137,7 +137,7 @@ h4,
 h5,
 h6 {
 	margin: 0 0 0.612em;
-	line-height: 1.2;
+	line-height: 1.3;
 	letter-spacing: -0.02em;
 }
 
@@ -490,8 +490,26 @@ input[type="submit"],
 	background-color: #98D931;
 }
 
+body.theme-green2 .wpulike-heart .counter a {
+	background-color: #98D931;
+}
+
 .button.orange {
 	background-color: #FF854A;
+	color: white!important;
+}
+
+.button.teal {
+	background-color: #41C5D9;
+	color: white!important;
+}
+
+body.theme-teal .wpulike-heart .counter a {
+	background-color: #41C5D9;
+}
+
+.button.gray {
+	background-color: #B8B8B8;
 	color: white!important;
 }
 
@@ -500,9 +518,13 @@ input[type="submit"],
 	color: white!important;
 }
 
-.button.teal {
+.button.turquoise {
 	background-color: #2ADDB3;
 	color: white!important;
+}
+
+body.theme-turquoise .wpulike-heart .counter a {
+	background-color: #2ADDB3;
 }
 
 .button.pink {
@@ -513,6 +535,10 @@ input[type="submit"],
 .button.purple {
 	background-color: #A28FDB;
 	color: white!important;
+}
+
+body.theme-purple .wpulike-heart .counter a {
+	background-color: #A28FDB;
 }
 
 
@@ -2661,4 +2687,16 @@ body.home .front-page-hero h1 {
 
 .error404 .site-header {
 	background-color: white;
+}
+
+/* App coming soon / placeholder page
+ * ========================================================================== */
+
+.app-placeholder .content-sidebar-wrap {
+	margin-bottom: 5%;
+}
+
+
+
+
 }

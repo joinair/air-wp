@@ -532,6 +532,10 @@ body.theme-turquoise .wpulike-heart .counter a {
 	color: white!important;
 }
 
+body.theme-pink .wpulike-heart .counter a {
+	background-color: #E580B1;
+}
+
 .button.purple {
 	background-color: #A28FDB;
 	color: white!important;
@@ -1887,7 +1891,7 @@ body.single-post .with-background-image:after {
 	.page-header h1,
 	.page-header .author-box-title,
 	.showcase-landing h1.entry-title {
-		font-size: 50px;
+		font-size: 58px;
 	}
 
 	.page-header .entry-meta {

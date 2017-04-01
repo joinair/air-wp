@@ -1800,6 +1800,7 @@ body.single-post .with-background-image:after {
 .bg-primary .site-header a,
 .bg-secondary a {
 	color: #4D4D4D;
+	outline: none;
 }
 
 .bg-primary a {

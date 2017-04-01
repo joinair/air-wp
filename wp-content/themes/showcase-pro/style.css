@@ -1552,12 +1552,12 @@ img.stretch {
 
 .genesis-nav-menu .menu-item.highlight a {
 	border: 1px solid #64ADF5;
-	color: #64ADF5;
+	color: #64ADF5!important;
 	border-radius: 4px;
 }
 
 .genesis-nav-menu .menu-item.highlight a:hover {
-	color: white;
+	color: white!important;
 	background-color: #64ADF5;
 }
 

@@ -251,6 +251,12 @@ genesis_register_sidebar( array(
 	'name'        => __( 'Before Footer', 'showcase' ),
 	'description' => __( 'This is a widget area right before the footer on every page.', 'showcase' ),
 ) );
+genesis_register_sidebar( array(
+	'id'          => 'app-vote-button',
+	'name'        => __( 'App voting button', 'showcase' ),
+	'description' => __( 'Vote for apps', 'showcase' ),
+) );
+
 
 //* Add the Before Footer Widget Area
 add_action( 'genesis_before_footer', 'showcase_before_footer_widget_area', 5 );

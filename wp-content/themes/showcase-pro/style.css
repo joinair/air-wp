@@ -479,15 +479,15 @@ input[type="submit"],
 }
 
 .button.blue {
-	background-color: #64ADF5;
+	background-color: #64ADF5!important;
 }
 
 .button.green {
-	background-color: #3ECA61;
+	background-color: #3ECA61!important;
 }
 
 .button.green2 {
-	background-color: #98D931;
+	background-color: #98D931!important;
 }
 
 body.theme-green2 .wpulike-heart .counter a {
@@ -896,7 +896,6 @@ img.stretch {
 
 .showcase-landing .site-container {
 	margin: 0 auto;
-	max-width: 800px;
 }
 
 .wrap {
@@ -921,9 +920,6 @@ img.stretch {
 }
 
 @media only screen and (min-width: 1025px) {
-
-	
-
 	.content {
 		float: right;
 		width: 70%;
@@ -1852,7 +1848,8 @@ body.single-post .with-background-image:after {
 }
 
 .page-header h1,
-.page-header .author-box-title {
+.page-header .author-box-title,
+.showcase-landing h1.entry-title {
 	line-height: 1.2;
 	font-size: 40px;
 	margin-bottom: 0.25em;
@@ -1883,14 +1880,14 @@ body.single-post .with-background-image:after {
 }
 
 @media only screen and (min-width: 800px) {
-
 	.page-header {
 		padding: 7% 0 6% 0;
 	}
 
 	.page-header h1,
-	.page-header .author-box-title {
-		font-size: 60px;
+	.page-header .author-box-title,
+	.showcase-landing h1.entry-title {
+		font-size: 50px;
 	}
 
 	.page-header .entry-meta {
@@ -1905,6 +1902,7 @@ body.single-post .with-background-image:after {
 
 .before-footer {
   padding: 30px 0;
+  margin-top: 3%;
   color: #ffffff;
   background: #ffb151; /* Old browsers */
   background: -moz-linear-gradient(left bottom, right top,  #ffb151 0%, #ff8769 100%); /* FF3.6-15 */
@@ -2696,7 +2694,3 @@ body.home .front-page-hero h1 {
 	margin-bottom: 5%;
 }
 
-
-
-
-}

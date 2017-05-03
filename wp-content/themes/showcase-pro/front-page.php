@@ -44,7 +44,13 @@ function showcase_front_page_genesis_meta() {
 		remove_action( 'genesis_before_loop', 'genesis_do_breadcrumbs' );
 
 		//* Add widgets on front page
-		add_action( 'genesis_after_header', 'showcase_front_page_widgets' );
+		add_action( 'genesis_after_header', 'showcase_front_page_content' );
+
+		//* Add resources section on front page
+		add_action( 'genesis_before_footer', 'showcase_front_page_resources', 1 );
+
+		//* Remove the Before Footer Widget Area
+		remove_action( 'genesis_before_footer', 'showcase_before_footer_widget_area', 5 );
 
 		//* Remove the default Genesis loop
 		remove_action( 'genesis_loop', 'genesis_do_loop' );
@@ -72,13 +78,6 @@ function showcase_front_page_widgets() {
 	genesis_widget_area( 'front-page-3', array(
 		'before' => '<div id="front-page-3" class="front-page-3 bg-primary flexible-widget-area"><div class="wrap"><div class="flexible-widgets widget-area' . showcase_widget_area_class( 'front-page-3' ) . '">',
 		'after'  => '</div></div></div>
-		<div class="testimonials-logo">
-		<img src="https://joinair.com/wp-content/themes/showcase-pro/images/air_hr_software_customers_zest.png" alt="Air HR software customer zest digital">
-		<img src="https://joinair.com/wp-content/themes/showcase-pro/images/air_hr_software_customers_powershift.png" alt="Air HR software customer powershift">
-		<img src="https://joinair.com/wp-content/themes/showcase-pro/images/air_hr_software_customers_clive_reeves.png" alt="Air HR software customer clive reeves">
-		<img src="https://joinair.com/wp-content/themes/showcase-pro/images/air_hr_software_customers_blu_tel.png" alt="Air HR software customer blu tel">
-		<img src="https://joinair.com/wp-content/themes/showcase-pro/images/air_hr_software_customers_jc_social_media.png" alt="Air HR software customer jc social media">
-		</div>
 		',
 	) );
 
@@ -88,24 +87,67 @@ function showcase_front_page_widgets() {
 		'after'  => '</div></div></div>',
 	) );
 
-echo '<div class="front-page-content front-page-2 flexible-widget-area"><div class="wrap"><div class="flexible-widgets widget-area">';
-
-while ( have_posts() ) : the_post();
-the_content();
-endwhile; //resetting the page loop
-wp_reset_query(); //resetting the page query
-
-echo '</div></div></div>',
-
-
-
 	genesis_widget_area( 'front-page-4', array(
 		'before' => '<div id="front-page-4" class="front-page-4 flexible-widget-area"><div class="wrap"><div class="widget-area">',
 		'after'  => '</div></div></div>',
 	) );
-
 }
 
+//* Frontpage content
+function showcase_front_page_content() {
+	echo '<div class="front-page-content front-page-2 flexible-widget-area"><div class="wrap"><div class="flexible-widgets widget-area">';
+
+	while ( have_posts() ) : the_post();
+	the_content();
+	endwhile; //resetting the page loop
+	wp_reset_query(); //resetting the page query
+
+	echo '</div></div></div>';
+}
+
+//* Frontpage content
+function showcase_front_page_resources() {
+	echo '<div class="front-page-content front-page-resources"><div class="wrap"><div class="flexible-widgets widget-area">';
+
+	echo '<h3 style="text-align: center;">Resources, guides, & inspiration</h3>';
+
+	// Most recent blog post 
+	$argsBlog = array(
+		'numberposts' => 1,
+		'category' => 0,
+		'post_status' => 'publish',
+	);
+	$recent_posts = wp_get_recent_posts( $argsBlog );
+	foreach( $recent_posts as $recent ){
+		if ( has_post_thumbnail($recent["ID"]) ) {
+			
+			$thumb_id = get_post_thumbnail_id($recent["ID"]);
+			$thumb_url_array = wp_get_attachment_image_src($thumb_id, 'showcase_featured_posts', true);
+			$thumb_url = $thumb_url_array[0];
+
+      		echo '<a href="' . get_permalink($recent["ID"]) . '" class="front-page-resources-column">';
+      		echo '<div class="front-page-resources-image" style="background-image: url(' . $thumb_url .')"><span class="front-page-resources-type">Latest Blog</span></div>';
+      		echo $recent["post_title"];
+      		echo '<span class="front-page-resources-link">View blog post &rarr;</span></a>';
+    	}
+		
+	}
+	wp_reset_query();
+
+	// Employee handbook template
+	echo '<a href="https://joinair.staging.wpengine.com/free-employee-handbook-template/" class="front-page-resources-column">';
+	echo '<div class="front-page-resources-image" style="background-image: url(https://joinair.staging.wpengine.com/wp-content/uploads/2017/05/front-page-resources-employee-handbook-template.jpg)"><span class="front-page-resources-type">Free Template</span></div>';
+	echo 'Improve onboarding and engagement of new employees with our Employee Handbook template.';
+	echo '<span class="front-page-resources-link">View template &rarr;</span></a>';
+
+	// All resources
+	echo '<a href="https://joinair.staging.wpengine.com/resources" class="front-page-resources-column">';
+	echo '<div class="front-page-resources-image" style="background-image: url(https://joinair.staging.wpengine.com/wp-content/uploads/2017/05/front-page-resources-view-all.jpg)"><span class="front-page-resources-type">Resources & Guides</span></div>';
+	echo 'Policies & templates covering all the needs of a growing company. Customizable and downloadable.';
+	echo '<span class="front-page-resources-link">View resources &rarr;</span></a>';
+
+	echo '</div></div></div>';
+}
 
 
 //* Run the Genesis function

@@ -621,7 +621,9 @@ input:hover[type="submit"],
 }
 
 .button.arrow-left:before,
-.button.arrow-right:after {
+.button.arrow-right:after,
+.button.play-left:before,
+.button.play-right:after {
 	font-family: Ionicons;
 	vertical-align: top;
 }
@@ -645,6 +647,28 @@ input:hover[type="submit"],
 	margin-right: 12px;
 	margin-left: -4px;
 }
+
+.button.play-left:before {
+	content: "\f215";
+	margin-right: 8px;
+}
+
+.button.play-left:hover:before {
+	margin-right: 12px;
+	margin-left: -4px;
+}
+
+.button.play-right:after {
+	content: "\f215";
+	margin-left: 8px;
+}
+
+.button.play-right:hover:after {
+	margin-left: 12px;
+	margin-right: -4px;
+}
+
+
 
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-results-button {
@@ -1860,13 +1884,7 @@ body.single-post .with-background-image:after {
 	margin-bottom: 0.25em;
 	display: inline-block;
 	font-weight: 500;
-}
-
-.page-header p {
-	font-size: 24px;
-	max-width: 740px;
-	margin: 0 auto 20px auto;
-}
+} 
 
 .page-header p:last-child {
 	margin-bottom: 0;
@@ -2654,29 +2672,52 @@ body.home .page-header {
 	padding: 7% 0 5% 0;
 }
 
+body.home .front-page-hero h1 {
+    font-weight: 500;
+    line-height: 1.05;
+    font-size: 16px; 
+    font-size: 12vw;
+}
+
+body.home .page-header p {
+	font-size: 20px;
+	font-size: 24px;
+	max-width: 740px;
+}
+
+@media only screen and (max-width: 767px) {
+	body.home .page-header {
+		padding: 12% 0 6% 0;
+	}
+
+	body.home .front-page-hero h1 {
+	    font-size: 13vw;
+	}
+
+	body.home .page-header p {
+		font-size: 20px;
+		line-height: 1.4;
+	}
+}
+
 body.home .with-background-image {
 	background-position: top left;
 }
 
 @media only screen and (min-width: 400px) {
 	.front-page-hero.widget-area {
-	    max-width: 72%;
+	    /*max-width: 72%;*/
 	}
 }
 
 @media only screen and (min-width: 1024px) {
 	.front-page-hero.widget-area {
-	    max-width: 58%;
+	    max-width: 60%;
 	}
 
 	body.home .front-page-hero h1 {
 	    font-size: 84px;
 	}
-}
-
-body.home .front-page-hero h1 {
-    font-weight: 600;
-    line-height: 1.1;
 }
 
 .front-page-hero.widget-area .button  {

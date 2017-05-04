@@ -205,10 +205,10 @@
 	position: relative;
 	float: left;
 	width: 30%;
-	height: 330px;
+	min-height: 330px;
 	background-color: white;
 	border-radius: 5px;
-	padding: 180px 30px 30px 30px;
+	padding: 180px 30px 50px 30px;
 	margin: 20px 1.5%;
 	overflow: hidden;
 }

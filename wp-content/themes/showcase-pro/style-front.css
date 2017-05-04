@@ -148,19 +148,19 @@
 	margin-bottom: 0;
 }
 
-.testimonials-logo {
+.press-logo {
 	text-align: center;
 	padding: 20px 10px;
 	background-color: #F2F2F2;
 }
 
-.testimonials-logo img {
+.press-logo img {
 	display: inline-block;
-	margin: 15px 10px 5px 10px;
+	margin: 15px 20px 5px 20px;
 }
 
 @media only screen and (max-width: 800px) {
-	.testimonials-logo img {
+	.press-logo img {
 		max-width: 100px;
 		margin: 5px 0;
 		vertical-align: middle;
@@ -184,3 +184,102 @@
  .front-page-4 .widget:nth-of-type(1) {
  	text-align: center;
  }
+
+ /* Front Page resources
+ * ========================================================================== */
+
+ .front-page-resources {
+ 	background-color: #5A6B72;
+ 	padding: 5% 0;
+ 	margin-top: -60px;
+ }
+
+@media only screen and (min-width: 800px) {
+ 	.front-page-resources {
+ 		margin-top: -5%;
+ 	}
+}
+
+.front-page-resources .front-page-resources-column {
+	display: block;
+	position: relative;
+	float: left;
+	width: 30%;
+	min-height: 330px;
+	background-color: white;
+	border-radius: 5px;
+	padding: 180px 30px 50px 30px;
+	margin: 20px 1.5%;
+	overflow: hidden;
+}
+
+@media only screen and (max-width: 800px) {
+	.front-page-resources .front-page-resources-column {
+		float: none;
+		width: 100%;
+		height: auto;
+	}
+}
+
+.front-page-resources .front-page-resources-column {
+	color: #3d3d3d;
+}
+
+.front-page-resources .front-page-resources-column:hover {
+	text-decoration: none;
+}
+
+.front-page-resources .front-page-resources-column .front-page-resources-image {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 160px;
+	overflow: hidden;
+	background-size: cover;
+}
+
+.front-page-resources .front-page-resources-column .front-page-resources-image::before {
+	display: block;
+  	position: relative;
+  	width: 100%;
+	height: 160px;
+	content: "";
+	opacity: 0.5;
+	background-color: #2C434B;
+}
+
+.front-page-resources .front-page-resources-column .front-page-resources-type {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	display: inline-block;
+	color: white;
+	font-weight: bold;
+	border: 2px solid white;
+	border-radius: 50px;
+	padding: 5px 10px;
+}
+
+.front-page-resources .front-page-resources-column .front-page-resources-link {
+	display: block;
+	position: absolute;
+	bottom: 20px;
+	left: 30px;
+	color: #64adf5;
+}
+
+@media only screen and (max-width: 800px) {
+	.front-page-resources .front-page-resources-column .front-page-resources-link {
+		position: relative;
+		display: inline-block;
+		margin-left: 5px;
+		top: 0;
+		left: 0;
+	}
+}
+
+.front-page-resources h3 {
+	color: white;
+}

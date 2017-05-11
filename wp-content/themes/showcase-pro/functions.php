@@ -374,3 +374,42 @@ foreach($scripts_to_async as $async_script){
 return $tag;
 }
 add_filter( 'script_loader_tag', 'defer_js_async', 10 );
+
+/* ==========================================================================
+ * App landing page related pages
+ * ========================================================================== */
+
+function get_feature_children() {
+  
+	// Set up the objects needed
+	$feature_page_id=7388;
+	$other_air_features='';
+	$current_page_id=get_the_ID();
+	$my_wp_query = new WP_Query();
+	$all_wp_pages = $my_wp_query->query(array('post_type' => 'page','posts_per_page'=>'-1'));
+
+	$childs=get_page_children($feature_page_id,$all_wp_pages);
+	$other_air_features.='<div class="vc_row wpb_row vc_row-fluid">';
+	foreach($childs as $child){
+		
+		 $child_id=$child->ID;
+		$child_image= get_post_meta($child_id,'sub_feature_image_url',true);
+		$child_text= get_post_meta($child_id,'sub_feature_text',true);
+		$child_title= get_post_meta($child_id,'sub_feature_title',true);
+		$child_link=get_permalink( $child_id );
+		if($current_page_id!=$child_id && !empty($child_image) && !empty($child_text) && !empty($child_title) && !empty($child_link)){
+			
+		$other_air_features.='<div class="wpb_column vc_column_container vc_col-sm-4" style="padding-top: 20px;"><p class="p1" style="text-align: center;"><a href="'.$child_link.'"><b><img class="aligncenter" src="'.$child_image.'" width="60" height="60" /></b></a></p>
+
+<h4 class="p1" style="text-align: center;">'.$child_title.'</h4>
+<p class="p1" style="text-align: center;">Get notified of holidays, sick days, birthdays, and more.</p>
+<p class="p1 red" style="text-align: center;"><a href="'.$child_link.'">Learn more →</a></p></div>';	
+						
+		}
+	}
+	$other_air_features.='</div>';
+	return	$other_air_features;
+  
+  
+   }
+add_shortcode('get_feature_child', 'get_feature_children');

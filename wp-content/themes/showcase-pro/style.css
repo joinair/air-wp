@@ -2767,3 +2767,79 @@ body.home .with-background-image {
 	margin-bottom: 5%;
 }
 
+.blog_box{border-radius:5px;border:1px solid #ddd;margin-bottom:30px;min-height:390px;position:relative;}
+.blog_box .blog_thumnail{}
+.blog_box .blog_thumnail img{    margin-bottom: 0px !important;    height: 155px;}
+.blog_box .blog_details{padding:15px 20px;    text-align: left;}
+.blog_box .blog_details span.time{display: block;
+    font-size: 13px;
+    padding-bottom: 5px;}
+.blog_box .blog_details h5{color: #3d3d3d;font-weight: 600;    font-size: 17px;}
+.blog_box  a{color: #3d3d3d;text-decoration:none;}
+.blog_box .blog_details p{    font-weight: 500;font-size:13px;}
+.blog_box .blog_details a.read_more{        font-size: 16px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;}
+.blog_box .blog_details .read_text_link{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: #64adf5 !important;}
+body.archive.category .content-sidebar-wrap {
+    max-width: inherit !important;
+}
+body.archive.category .wrap {
+    max-width: inherit !important;
+}
+.column_row-fluid{
+    margin-left:0px -15px;
+}
+.fourth_column{
+    width: 25%;
+    padding:0px 15px;
+    float:left;
+    box-sizing: border-box;
+}
+.nav-links{
+        margin-bottom: 15px;
+}
+.nav-links .page-numbers{
+    display: inline-block;
+    vertical-align: top;
+    padding: 3px;
+    margin: 3px;
+    height: 24px;
+    line-height: 18px;
+    font-size: 14px;
+    min-width: 20px;
+    text-align: center;
+    text-decoration: none;
+}
+.nav-links .page-numbers.current{
+    background-color: #6ab2e4;
+    color: #fff;
+    border-radius: 3px;
+}
+.resources_archive_block{ min-height: 261px !important; }
+ .resources_archive_block:hover{background: #f5faff;}
+.resources_archive_block .blog_thumnail{    padding: 20px 0px 0px;}
+.resources_archive_block .blog_thumnail img{
+    max-width:80px;
+        height: inherit;
+}
+.resources_archive_block .blog_details{
+    text-align: left;
+}
+.resources_archive_block a{
+    color: #3d3d3d;text-decoration:none;
+}
+@media only screen and (max-width: 1024px) {
+    .fourth_column{
+    width: 50%;
+}
+@media only screen and (max-width: 767px) {
+    .fourth_column{
+    width: 100%;
+}
+}

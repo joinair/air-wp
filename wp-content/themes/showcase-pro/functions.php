@@ -399,11 +399,11 @@ function get_feature_children() {
 		$child_link=get_permalink( $child_id );
 		if($current_page_id!=$child_id && !empty($child_image) && !empty($child_text) && !empty($child_title) && !empty($child_link)){
 			
-		$other_air_features.='<div class="wpb_column vc_column_container vc_col-sm-4" style="padding: 15px; min-height: 260px;"><p class="p1" style="text-align: center; margin-bottom: 5px;"><a href="'.$child_link.'"><b><img class="aligncenter" src="'.$child_image.'" width="60" height="60" /></b></a></p>
+		$other_air_features.='<div class="wpb_column vc_column_container vc_col-sm-4" style="padding-top: 20px;"><p class="p1" style="text-align: center;"><a href="'.$child_link.'"><b><img class="aligncenter" src="'.$child_image.'" width="60" height="60" /></b></a></p>
 
-<h4 class="p1" style="text-align: center; margin-bottom: 10px;">'.$child_title.'</h4>
-<p class="p1" style="text-align: center; margin-bottom: 10px;">'.$child_text.'</p>
-<p class="p1 red" style="text-align: center; margin-bottom: 10px;"><a href="'.$child_link.'">Learn more →</a></p></div>';	
+<h4 class="p1" style="text-align: center;">'.$child_title.'</h4>
+<p class="p1" style="text-align: center;">Get notified of holidays, sick days, birthdays, and more.</p>
+<p class="p1 red" style="text-align: center;"><a href="'.$child_link.'">Learn more →</a></p></div>';	
 						
 		}
 	}
@@ -413,15 +413,15 @@ function get_feature_children() {
   
    }
 add_shortcode('get_feature_child', 'get_feature_children');
-
 add_action( 'pre_get_posts', 'mjg_show_titles_only_category_pages' );
 function mjg_show_titles_only_category_pages( $query ) {
  
+        // to check for Blog category
 	if( $query->is_main_query() && $query->is_category(37) ) {
 				
 		remove_action( 'genesis_loop', 'genesis_do_loop' );
 		add_action( 'genesis_loop', 'surefire_loop_helper_blog' );
-                
+           // for Resource posts: Job descriptions, Policy templates, Interview questions      
         }else if($query->is_main_query() && $query->is_category(array(35,33,36)) ){
             
                 remove_action( 'genesis_loop', 'genesis_do_loop' );
@@ -432,24 +432,13 @@ function mjg_show_titles_only_category_pages( $query ) {
 
 function surefire_loop_helper_blog() {
 //Create a standard wordpress loop
-    $each_post_data='<div class="vc_row wpb_row column_row-fluid clearfix">';
+    $each_post_data='<div class="vc_row wpb_row column_row-fluid clearfix custom_blog_thumnail">';
 while(have_posts()) : the_post();
 
-$each_post_data.=''
-        . '<div class="fourth_column">'
-        . '<div class="blog_box"><a href="'.get_permalink().'" class="text-center read_more">'
-        . '<div class="blog_thumnail">'
-        .'<img class="aligncenter" src="'.get_the_post_thumbnail_url().'" />
-            </div>
-            <div class="blog_details">
-<span class="time">'.get_the_date("d M Y").'</span>
-<h5 class="p1" style="margin-bottom: 10px;">
-'.wp_trim_words( get_the_title(), 9, '...').'</h5>
-<p class="p1" style="margin-bottom: 10px;">'.wp_trim_words( get_the_content(), 15, '...').'</p>
-<span class="read_text_link">Read post →</span>'
-        . '</div>'
-        . '</a></div>'
-        . '</div>';			
+$each_post_data.='<div class="fourth_column"><div class="blog_box"><a href="'.get_permalink().'" class="text-center read_more">'
+        . '<div class="blog_thumnail"><img class="aligncenter" src="'.get_the_post_thumbnail_url(get_the_ID(),"article-thumbnail-image").'" /></div><div class="blog_details">
+<span class="time">'.get_the_date("d M Y").'</span><h5 class="p1" style="margin-bottom: 10px;">'.wp_trim_words( get_the_title(), 9, '...').'</h5>
+<p class="p1" style="margin-bottom: 36px;">'.wp_trim_words( get_the_content(), 15, '...').'</p><span class="read_text_link">Read post &#x2192;</span></div></a></div></div>';			
 
 
 endwhile;
@@ -467,23 +456,10 @@ function surefire_loop_helper_other_cat() {
     $each_post_data='<div class="vc_row wpb_row column_row-fluid clearfix">';
 while(have_posts()) : the_post();
 
-$each_post_data.=''
-        . '<div class="fourth_column">'
-        . '<div class="blog_box resources_archive_block"><a href="'.get_permalink().'">'
-        . '<div class="blog_thumnail">'
-        . '<img class="aligncenter" height="65px" src="'.get_site_url().'/wp-content/uploads/2017/05/file_icon.png" />'
-        .'<i class="fa fa-file-text-o" aria-hidden="true"></i>
-       
-            
-            </div>
-            <div class="blog_details">
-<span class="time"></span>
-<h5 class="p1" style="margin-bottom: 10px;">
-'.wp_trim_words( get_the_title(), 9, '').'</h5>
-<p class="p1" style="margin-bottom: 10px;">'.wp_trim_words( get_the_content(), 15, '').'</p>'
-        . '</div>'
-        . '</a></div>'
-        . '</div>';			
+$each_post_data.='<div class="fourth_column"><div class="blog_box resources_archive_block"><a href="'.get_permalink().'"><div class="blog_thumnail">'
+        . '<img class="aligncenter" height="65px" src="'.get_site_url().'/wp-content/uploads/2017/05/file_icon.png" /><i class="fa fa-file-text-o" aria-hidden="true"></i>
+       </div><div class="blog_details"><span class="time"></span><h5 class="p1" style="margin-bottom: 10px;">'.wp_trim_words( get_the_title(), 9, '').'</h5>
+<p class="p1" style="margin-bottom: 10px;">'.wp_trim_words( get_the_content(), 15, '').'</p></div></a></div></div>';			
 
 
 endwhile;

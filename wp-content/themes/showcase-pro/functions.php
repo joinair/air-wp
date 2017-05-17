@@ -400,18 +400,20 @@ function get_feature_children() {
 		$child_title= get_post_meta($child_id,'sub_feature_title',true);
 		$child_link=get_permalink( $child_id );
 		if($current_page_id!=$child_id && !empty($child_image) && !empty($child_text) && !empty($child_title) && !empty($child_link)){
-		if($child_count==6 || $child_count > 6)
-                {
-                    break;
-                }else{	
-		$other_air_features.='<div class="wpb_column vc_column_container vc_col-sm-4" style="padding-top: 20px;"><p class="p1" style="text-align: center;"><a href="'.$child_link.'"><b><img class="aligncenter" src="'.$child_image.'" width="60" height="60" /></b></a></p>
+		if($child_count==6 || $child_count > 6) {
+                    
+            break;
+            
+            } else {	
+			
+				$other_air_features.='<div class="wpb_column vc_column_container vc_col-sm-4" style="padding:0 10px 30px 10px; text-align: center;"><a href="'.$child_link.'" style="display: block; margin-bottom: 20px;"><img class="aligncenter" src="'.$child_image.'" width="60" height="60" /></a>
 
-<h4 class="p1" style="text-align: center;">'.$child_title.'</h4>
-<p class="p1" style="text-align: center;">Get notified of holidays, sick days, birthdays, and more.</p>
-<p class="p1 red" style="text-align: center;"><a href="'.$child_link.'">Learn more →</a></p></div>';	
+				<h4>'.$child_title.'</h4>
+				<p style="margin-bottom: 10px;">'.$child_text.'</p>
+				<p style=""><a href="'.$child_link.'">Learn more &rarr;</a></p></div>';	
 					
                 $child_count++;
-		}
+			}
                 }
                 
 	}

@@ -390,8 +390,12 @@ function get_feature_children() {
 
 	$childs=get_page_children($feature_page_id,$all_wp_pages);
 	$other_air_features.='<div class="vc_row wpb_row vc_row-fluid">';
+        $child_count=0;
 	foreach($childs as $child){
-		
+		if($child_count==6 || $child_count > 6)
+                {
+                    break;
+                }else{
 		 $child_id=$child->ID;
 		$child_image= get_post_meta($child_id,'sub_feature_image_url',true);
 		$child_text= get_post_meta($child_id,'sub_feature_text',true);
@@ -406,6 +410,8 @@ function get_feature_children() {
 <p class="p1 red" style="text-align: center;"><a href="'.$child_link.'">Learn more →</a></p></div>';	
 						
 		}
+                }
+                $child_count++;
 	}
 	$other_air_features.='</div>';
 	return	$other_air_features;

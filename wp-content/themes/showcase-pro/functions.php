@@ -434,9 +434,9 @@ function surefire_loop_helper_blog() {
 //Create a standard wordpress loop
     $each_post_data='<div class="vc_row wpb_row column_row-fluid clearfix custom_blog_thumnail">';
 while(have_posts()) : the_post();
-
+set_post_thumbnail_size(262,150, true);
 $each_post_data.='<div class="fourth_column"><div class="blog_box"><a href="'.get_permalink().'" class="text-center read_more">'
-        . '<div class="blog_thumnail"><img class="aligncenter" src="'.get_the_post_thumbnail_url(get_the_ID(),"article-thumbnail-image").'" /></div><div class="blog_details">
+        . '<div class="blog_thumnail" style="background-size: cover; background-image:url('.get_the_post_thumbnail_url(get_the_ID(),"thumbnail-blogs").')"></div><div class="blog_details">
 <span class="time">'.get_the_date("d M Y").'</span><h5 class="p1" style="margin-bottom: 10px;">'.wp_trim_words( get_the_title(), 9, '...').'</h5>
 <p class="p1" style="margin-bottom: 36px;">'.wp_trim_words( get_the_content(), 15, '...').'</p><span class="read_text_link">Read post &#x2192;</span></div></a></div></div>';			
 

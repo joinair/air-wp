@@ -2862,7 +2862,7 @@ body.home .with-background-image {
     border-radius: 3px;
 }
 .resources_archive_block {
-    min-height: 261px !important;
+    min-height: 273px !important;
 }
 .resources_archive_block:hover {
     background: #f5faff;

@@ -2965,7 +2965,7 @@ body.home .with-background-image {
 .small-box-description .show-small-description {
       position: absolute;
       left: 0;
-      bottom: -20px;
+      bottom: -22px;
       z-index: 3;
       right:0;      
       text-align: center;
@@ -2975,6 +2975,8 @@ body.home .with-background-image {
     color: #fff !important; 
     margin: 0;
     padding: 6px 15px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
 }
 .small-box-description.open>div {
     height: 100%;
@@ -2997,6 +2999,10 @@ body.home .with-background-image {
 .policies_block .policies_heading h4 span{
     margin-left: 5px;
     color: #64adf5;
+}
+
+body.free-hr-policy-templates .site-inner {
+    padding: 0;
 }
 
 body.free-hr-policy-templates .header-wrap.bg-primary:after {

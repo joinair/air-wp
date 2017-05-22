@@ -2971,6 +2971,26 @@ body.home .with-background-image {
 }
 
 .policies_block .policies_heading h4 span{
-        margin-left: 5px;
+    margin-left: 5px;
     color: #64adf5;
+}
+
+body.free-hr-policy-templates header.entry-header{
+    display:none;
+}
+body.free-hr-policy-templates .entry-categories{
+    display:none;
+}
+body.free-hr-policy-templates .bg-primary a{
+    color: #64adf5;
+}
+body.free-hr-policy-templates .small-box-description>div:before{
+    display: none;
+}    
+body.free-hr-policy-templates .page-template-page_blog .entry, 
+body.free-hr-policy-templates .blog .entry, .archive .entry, 
+body.free-hr-policy-templates .single-post .entry {
+    margin-bottom: 0px;
+    padding: 40px 0 0px;
+    border-bottom:none;
 }

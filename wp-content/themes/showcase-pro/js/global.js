@@ -38,3 +38,10 @@ jQuery( function ( $ ) {
 	});
 
 });
+var catObj =jQuery(".entry-categories");
+var a_data = catObj.find("a")[0];
+catObj.html(a_data);
+catObj.show();jQuery(".show-small-description button").on("click", function() {
+    jQuery(".small-box-description").toggleClass("open");
+    jQuery(".small-box-description button").hide() 
+});

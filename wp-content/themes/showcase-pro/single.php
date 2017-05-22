@@ -31,9 +31,8 @@ remove_action( 'genesis_entry_header', 'genesis_post_info', 8 );
 
 }
 function custom_entry_content_policy() {
+ 
 
-echo '<script>var catObj =jQuery(".entry-categories");var a_data = catObj.find("a")[0];catObj.html(a_data);catObj.show();jQuery(".show-small-description button").on("click", function() {jQuery(".small-box-description").toggleClass("open");jQuery(".small-box-description button").hide() });</script>';    
-echo '<style>header.entry-header{display:none;}.entry-categories{display:none;}.bg-primary a{color: #64adf5;}.small-box-description>div:before{display: none;}.page-template-page_blog .entry, .blog .entry, .archive .entry, .single-post .entry {margin-bottom: 0px;padding: 40px 0 0px;border-bottom:none;}</style>';
     the_content();
     
 }
@@ -100,8 +99,18 @@ function remove_post_info_multiple_pages($post_info) {
   
 
 }
-
-
+add_filter('body_class','add_category_to_single');
+function add_category_to_single($classes) {
+  if (is_single() ) {
+    global $post;
+    foreach((get_the_category($post->ID)) as $category) {
+      // add category slug to the $classes array
+      $classes[] = $category->category_nicename;
+    }
+  }
+  // return the $classes array
+  return $classes;
+}
 
 
 genesis();

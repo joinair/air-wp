@@ -2256,10 +2256,7 @@ body.single-post .with-background-image:after {
 	max-width: 740px;
 	margin: 0 auto;
 }
-.category-blog .content-sidebar-wrap, 
-.category-free-job-description-templates .content-sidebar-wrap,
-    .category-free-interview-question-templates .content-sidebar-wrap,
-        .category-free-hr-policy-templates .content-sidebar-wrap {
+.category-blog .content-sidebar-wrap, .category-free-job-description-templates .content-sidebar-wrap, .category-free-interview-question-templates .content-sidebar-wrap, .category-free-hr-policy-templates .content-sidebar-wrap {
     max-width: inherit;
 
 }
@@ -2773,6 +2770,10 @@ body.home .with-background-image {
 	margin-bottom: 5%;
 }
 
+
+/* Blog and Resources archives
+ * ========================================================================== */
+
 .blog_box {
     border-radius: 5px;
     border: 1px solid #ddd;
@@ -2881,39 +2882,57 @@ body.home .with-background-image {
     color: #3d3d3d;
     text-decoration: none;
 }
-.work_block{    background: #fafafa;     padding: 40px 40px 0px 40px;height: 395px;
-    overflow: hidden;}
-.work_block .heading{text-align: center;}
-.work_block .heading h4{}
-.work_block .heading p{}
-.work_block .heading p a{ margin-left:5px;color: #64adf5;    line-height: 1.5;
-    font-size: 18px;}
 
-.work_block .work_details_image{text-align: center;}
-.work_block .work_details_image img{max-width:100%;}
+/* Resource Post Template
+ * ========================================================================== */
+
+.work_block {
+	background: #fafafa;
+	padding: 40px 40px 0px 40px;
+	height: 395px;
+    overflow: hidden;
+}
+.work_block .heading {
+	text-align: center;
+}
+
+.work_block .heading p a { 
+	margin-left:5px;
+	color: #64adf5;
+	line-height: 1.5;
+    font-size: 18px;
+}
+
+.work_block .work_details_image {
+	text-align: center;
+}
+.work_block .work_details_image img {
+	max-width:100%;
+}
+
 @media only screen and (max-width: 1200px) {
     .blog_box {   
-    min-height: 430px;   
-}
+    	min-height: 430px;   
+	}
 }
 @media only screen and (max-width: 1024px) {
     .fourth_column{
-    width: 50%;
-}
+    	width: 50%;
+	}
     .blog_box {   
-    min-height: 340px;   
-}
+    	min-height: 340px;   
+	}
 }
 @media only screen and (max-width: 767px) {
     .fourth_column{
-    width: 100%;
-}
-.work_block{ 
-    height:inherit;
-}
-    .blog_box {   
-    min-height: inherit;   
-}
+    	width: 100%;
+	}
+	.work_block{ 
+	    height:inherit;
+	}
+	    .blog_box {   
+	    min-height: inherit;   
+	}
 }
 .small-box-description>div {
     background: #fafafa;

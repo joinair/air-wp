@@ -1919,7 +1919,7 @@ body.single-post .with-background-image:after {
 	opacity: .5;
 }
 
-.page-header a:hover:not(.button) {
+.page-header a:hover:not(.button), body.free-hr-policy-templates .page-header a:not(.button) {
 	opacity: 1;
 }
 
@@ -2889,7 +2889,6 @@ body.home .with-background-image {
 .work_block {
 	background: #fafafa;
 	padding: 40px 40px 0px 40px;
-	height: 395px;
     overflow: hidden;
 }
 .work_block .heading {
@@ -2905,9 +2904,13 @@ body.home .with-background-image {
 
 .work_block .work_details_image {
 	text-align: center;
+	line-height: 0;
 }
+
 .work_block .work_details_image img {
 	max-width:100%;
+	width: 720px;
+	height: auto;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -2915,6 +2918,7 @@ body.home .with-background-image {
     	min-height: 430px;   
 	}
 }
+
 @media only screen and (max-width: 1024px) {
     .fourth_column{
     	width: 50%;
@@ -2923,6 +2927,7 @@ body.home .with-background-image {
     	min-height: 340px;   
 	}
 }
+
 @media only screen and (max-width: 767px) {
     .fourth_column{
     	width: 100%;
@@ -2994,22 +2999,30 @@ body.home .with-background-image {
     color: #64adf5;
 }
 
-body.free-hr-policy-templates header.entry-header{
+body.free-hr-policy-templates .header-wrap.bg-primary:after {
+	background-color: transparent;
+}
+
+body.free-hr-policy-templates .site-header {
+	border-bottom: 1px #ededed solid;
+}
+
+body.free-hr-policy-templates .page-header h1 {
+	color: #3d3d3d;
+}
+
+body.free-hr-policy-templates .page-header a {
+	color: #64adf5;
+}
+
+body.free-hr-policy-templates.single-post .entry {
+	border-bottom: 0;
+	margin-bottom: 0;
+}
+
+body.free-hr-policy-templates header.entry-header {
     display:none;
 }
 body.free-hr-policy-templates .entry-categories{
     display:none;
-}
-body.free-hr-policy-templates .bg-primary a{
-    color: #64adf5;
-}
-body.free-hr-policy-templates .small-box-description>div:before{
-    display: none;
-}    
-body.free-hr-policy-templates .page-template-page_blog .entry, 
-body.free-hr-policy-templates .blog .entry, .archive .entry, 
-body.free-hr-policy-templates .single-post .entry {
-    margin-bottom: 0px;
-    padding: 40px 0 0px;
-    border-bottom:none;
 }

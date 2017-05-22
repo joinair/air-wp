@@ -38,7 +38,7 @@ function custom_entry_content_policy() {
 }
 function places_to_work_before_footer_widget_area() {
 	
-echo'<div class="work_block"><div class="wrap"><div class="heading"><h4>Build great places to work</h4><p>Smart HR software designed for small & medium businesses. <a href="'.get_site_url().'/features/">Learn More</a></p></div><div class="work_details_image"><img src="'.get_site_url().'/wp-content/uploads/2017/05/work.png" alt=""/></div></div></div>';
+echo'<div class="work_block"><div class="wrap"><div class="heading"><h4>Build great places to work</h4><p>Smart HR software designed for small & medium businesses. <a href="'.get_site_url().'/features/">Learn More &rarr;</a></p></div><div class="work_details_image"><img src="'.get_site_url().'/wp-content/uploads/2017/05/air-hr-software-dashboard-people-directory.png" alt="Smart HR software"/></div></div></div>';
 	
 }
 function get_related_posts_data() {
@@ -52,9 +52,10 @@ if ( $categories ) {
         $category_ids[] = $individual_category->term_id;
     }
 }   
+$currentID = get_the_ID();
 $args=array(
         'category__in' => $category_ids,
-        'post__not_in' => array(0),
+        'post__not_in' => array($currentID),
         'showposts'=>3 // Number of related posts that will be shown.
         
     );

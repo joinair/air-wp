@@ -2881,6 +2881,16 @@ body.home .with-background-image {
     color: #3d3d3d;
     text-decoration: none;
 }
+.work_block{    background: #fafafa;     padding: 40px 40px 0px 40px;height: 395px;
+    overflow: hidden;}
+.work_block .heading{text-align: center;}
+.work_block .heading h4{}
+.work_block .heading p{}
+.work_block .heading p a{ margin-left:5px;color: #64adf5;    line-height: 1.5;
+    font-size: 18px;}
+
+.work_block .work_details_image{text-align: center;}
+.work_block .work_details_image img{max-width:100%;}
 @media only screen and (max-width: 1200px) {
     .blog_box {   
     min-height: 430px;   
@@ -2898,7 +2908,69 @@ body.home .with-background-image {
     .fourth_column{
     width: 100%;
 }
+.work_block{ 
+    height:inherit;
+}
     .blog_box {   
     min-height: inherit;   
 }
+}
+.small-box-description>div {
+    background: #fafafa;
+    border: 1px solid #e8e8e8;
+    border-radius: 6px;
+    padding: 24px;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+    -moz-transition: height 1s ease;
+    -webkit-transition: height 1s ease;
+    -o-transition: height 1s ease;
+    transition: height 1s ease;
+}
+.small-box-description>div:before {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 90px;
+    background: -webkit-linear-gradient(top,rgba(247, 247, 247, 0),rgb(183, 183, 183));
+    z-index: 2;
+}
+.small-box-description .show-small-description {
+      position: absolute;
+      left: 0;
+      bottom: -20px;
+      z-index: 3;
+      right:0;      
+      text-align: center;
+}
+.small-box-description .show-small-description button {
+    background: rgb(202, 140, 212) !important;
+    color: #fff !important; 
+    margin: 0;
+    padding: 6px 15px;
+}
+.small-box-description.open>div {
+    height: 100%;
+}
+.small-box-description.open>div:before {
+    display: none;
+}
+
+.policies_block{
+    margin: 60px 0px 0px;
+}
+.policies_block .policies_heading{}
+.policies_block .policies_heading h4{
+     font-size: 15px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.policies_block .policies_heading h4 span{
+        margin-left: 5px;
+    color: #64adf5;
 }

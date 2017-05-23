@@ -1779,7 +1779,7 @@ img.stretch {
 /* Entry Navigation */
 
 .pagination {
-	margin-top: 40px;
+	margin: 30px 0;
 	text-align: center;
 }
 
@@ -2842,9 +2842,6 @@ body.home .with-background-image {
     float: left;
     box-sizing: border-box;
 }
-.nav-links {
-        margin-bottom: 15px;
-}
 .nav-links .page-numbers {
     display: inline-block;
     vertical-align: top;
@@ -2863,7 +2860,7 @@ body.home .with-background-image {
     border-radius: 3px;
 }
 .resources_archive_block {
-    min-height: 273px !important;
+    min-height: 200px !important;
 }
 .resources_archive_block:hover {
     background: #f5faff;
@@ -2988,16 +2985,15 @@ body.home .with-background-image {
 body.free-hr-policy-templates .policies_block{
     margin: 60px 0px 0px;
 }
-body.free-hr-policy-templates .policies_block .policies_heading{}
-body.free-hr-policy-templates .policies_block .policies_heading h4{
+
+body.free-hr-policy-templates .policies_block .policies_heading h4 {
      font-size: 15px;
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
-body.free-hr-policy-templates .policies_block .policies_heading h4 span{
-    margin-left: 5px;
+body.free-hr-policy-templates .policies_block .policies_heading h4 span {
     color: #64adf5;
 }
 

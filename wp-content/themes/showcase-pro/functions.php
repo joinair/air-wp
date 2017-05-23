@@ -483,7 +483,7 @@ $content_data=wp_trim_words( get_the_content(), 18, '');
 $each_post_data.='<div class="fourth_column"><div class="blog_box resources_archive_block"><a href="'.get_permalink().'"><div class="blog_thumnail">'
         . '<img class="aligncenter" height="65px" src="'.get_site_url().'/wp-content/uploads/2017/05/file_icon.png" /><i class="fa fa-file-text-o" aria-hidden="true"></i>
        </div><div class="blog_details"><span class="time"></span><h5 class="p1" style="margin-bottom: 10px;">'.wp_trim_words( get_the_title(), 9, '').'</h5>
-<p class="p1" style="margin-bottom: 10px;">'.$content_data.'</p></div></a></div></div>';			
+</div></a></div></div>';			
 
 
 endwhile;

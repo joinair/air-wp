@@ -1919,7 +1919,7 @@ body.single-post .with-background-image:after {
 	opacity: .5;
 }
 
-.page-header a:hover:not(.button) {
+.page-header a:hover:not(.button), body.free-hr-policy-templates .page-header a:not(.button) {
 	opacity: 1;
 }
 
@@ -2256,10 +2256,7 @@ body.single-post .with-background-image:after {
 	max-width: 740px;
 	margin: 0 auto;
 }
-.category-blog .content-sidebar-wrap, 
-.category-free-job-description-templates .content-sidebar-wrap,
-    .category-free-interview-question-templates .content-sidebar-wrap,
-        .category-free-hr-policy-templates .content-sidebar-wrap {
+.category-blog .content-sidebar-wrap, .category-free-job-description-templates .content-sidebar-wrap, .category-free-interview-question-templates .content-sidebar-wrap, .category-free-hr-policy-templates .content-sidebar-wrap {
     max-width: inherit;
 
 }
@@ -2773,6 +2770,10 @@ body.home .with-background-image {
 	margin-bottom: 5%;
 }
 
+
+/* Blog and Resources archives
+ * ========================================================================== */
+
 .blog_box {
     border-radius: 5px;
     border: 1px solid #ddd;
@@ -2881,47 +2882,62 @@ body.home .with-background-image {
     color: #3d3d3d;
     text-decoration: none;
 }
-.work_block{   
-    background: #fafafa;
-    padding: 40px 40px 0px 40px;
-    height: 395px;
+
+/* Resource Post Template
+ * ========================================================================== */
+
+.work_block {
+	background: #fafafa;
+	padding: 40px 40px 0px 40px;
     overflow: hidden;
 }
-.work_block .heading{
-    text-align: center;
+.work_block .heading {
+	text-align: center;
 }
-.work_block .heading p a{ 
-    margin-left:5px;
-    color: #64adf5;
-    line-height: 1.5;
+
+.work_block .heading p a { 
+	margin-left:5px;
+	color: #64adf5;
+	line-height: 1.5;
     font-size: 18px;
 }
 
-.work_block .work_details_image{text-align: center;}
-.work_block .work_details_image img{max-width:100%;}
+.work_block .work_details_image {
+	text-align: center;
+	line-height: 0;
+}
+
+.work_block .work_details_image img {
+	max-width:100%;
+	width: 720px;
+	height: auto;
+}
+
 @media only screen and (max-width: 1200px) {
     .blog_box {   
-    min-height: 430px;   
+    	min-height: 430px;   
+	}
 }
-}
+
 @media only screen and (max-width: 1024px) {
     .fourth_column{
-    width: 50%;
-}
+    	width: 50%;
+	}
     .blog_box {   
-    min-height: 340px;   
+    	min-height: 340px;   
+	}
 }
-}
+
 @media only screen and (max-width: 767px) {
     .fourth_column{
-    width: 100%;
-}
-.work_block{ 
-    height:inherit;
-}
-    .blog_box {   
-    min-height: inherit;   
-}
+    	width: 100%;
+	}
+	.work_block{ 
+	    height:inherit;
+	}
+	    .blog_box {   
+	    min-height: inherit;   
+	}
 }
 .small-box-description>div {
     background: #fafafa;
@@ -2949,7 +2965,7 @@ body.home .with-background-image {
 .small-box-description .show-small-description {
       position: absolute;
       left: 0;
-      bottom: -20px;
+      bottom: -22px;
       z-index: 3;
       right:0;      
       text-align: center;
@@ -2959,6 +2975,8 @@ body.home .with-background-image {
     color: #fff !important; 
     margin: 0;
     padding: 6px 15px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
 }
 .small-box-description.open>div {
     height: 100%;
@@ -2983,22 +3001,34 @@ body.free-hr-policy-templates .policies_block .policies_heading h4 span{
     color: #64adf5;
 }
 
-body.free-hr-policy-templates header.entry-header{
+body.free-hr-policy-templates .site-inner {
+    padding: 0;
+}
+
+body.free-hr-policy-templates .header-wrap.bg-primary:after {
+	background-color: transparent;
+}
+
+body.free-hr-policy-templates .site-header {
+	border-bottom: 1px #ededed solid;
+}
+
+body.free-hr-policy-templates .page-header h1 {
+	color: #3d3d3d;
+}
+
+body.free-hr-policy-templates .page-header a {
+	color: #64adf5;
+}
+
+body.free-hr-policy-templates.single-post .entry {
+	border-bottom: 0;
+	margin-bottom: 0;
+}
+
+body.free-hr-policy-templates header.entry-header {
     display:none;
 }
 body.free-hr-policy-templates .entry-categories{
     display:none;
-}
-body.free-hr-policy-templates .bg-primary a{
-    color: #64adf5;
-}
-body.free-hr-policy-templates .small-box-description>div:before{
-    display: none;
-}    
-body.free-hr-policy-templates .page-template-page_blog .entry, 
-body.free-hr-policy-templates .blog .entry, .archive .entry, 
-body.free-hr-policy-templates .single-post .entry {
-    margin-bottom: 0px;
-    padding: 40px 0 0px;
-    border-bottom:none;
 }

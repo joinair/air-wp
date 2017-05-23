@@ -21,7 +21,6 @@ add_filter( 'genesis_post_info', 'remove_post_info_multiple_pages' );
 add_action( 'genesis_entry_content', 'custom_entry_content_policy' );// Add custom loop
 add_shortcode('get_related_posts', 'get_related_posts_data');
 add_action( 'genesis_before_footer', 'places_to_work_before_footer_widget_area', 4 );
-//remove_action( 'genesis_footer', 'genesis_do_footer' );
 
 
 
@@ -54,7 +53,7 @@ if ( $categories ) {
 }   
 $args=array(
         'category__in' => $category_ids,
-        'post__not_in' => array(0),
+        'post__not_in' => array(get_the_ID()),
         'showposts'=>3 // Number of related posts that will be shown.
         
     );
@@ -64,7 +63,7 @@ if( $related ) {
    $each_post_data='<div class="policies_block"><div class="policies_heading"><h4>Related: <span>'. strtoupper($cat_name).'</span></h4></div><div class="vc_row wpb_row column_row-fluid clearfix">';
    while( $related->have_posts() ) {  
    $related->the_post();
-   // setup_postdata($post); 
+   
    $content_data=wp_trim_words( get_the_content(), 18, '');
    $the_content = array("[vc_row]","[vc_column]","[vc_column_text]","[/VC_COLUMN]");
    $is_found=0;
@@ -86,10 +85,10 @@ if( $related ) {
 <p class="p1" style="margin-bottom: 10px;">'.$content_data.'</p></div></a></div></div></div></div>';			
 
     }
-//wp_reset_postdata();
+
 }
 echo $each_post_data.'</div></div>';
-//echo'<div class="work_block"><div class="heading"><h4>Build great places to work</h4><p>Smart HR software designed for small & medium businesses. <a href="#">Learn More</a></p></div></div>';
+
 }
 
 function remove_post_info_multiple_pages($post_info) {

@@ -464,10 +464,26 @@ function surefire_loop_helper_other_cat() {
     $each_post_data='<div class="vc_row wpb_row column_row-fluid clearfix">';
 while(have_posts()) : the_post();
 
+$content_data=wp_trim_words( get_the_content(), 18, '');
+   $the_content = array("[vc_row]","[vc_column]","[vc_column_text]","[/VC_COLUMN]");
+   $is_found=0;
+   foreach($the_content as $taggs){
+       if(strpos($content_data,$taggs)!=false){
+          $content_data= str_replace($taggs,"",$content_data);
+          
+           $is_found=1;
+       }
+   }
+   if($is_found==0){
+       $content_data=wp_trim_words( get_the_content(), 15, '');
+   }else{
+        $content_data= str_replace("[vc_row]","",$content_data);
+   }
+   
 $each_post_data.='<div class="fourth_column"><div class="blog_box resources_archive_block"><a href="'.get_permalink().'"><div class="blog_thumnail">'
         . '<img class="aligncenter" height="65px" src="'.get_site_url().'/wp-content/uploads/2017/05/file_icon.png" /><i class="fa fa-file-text-o" aria-hidden="true"></i>
        </div><div class="blog_details"><span class="time"></span><h5 class="p1" style="margin-bottom: 10px;">'.wp_trim_words( get_the_title(), 9, '').'</h5>
-<p class="p1" style="margin-bottom: 10px;">'.wp_trim_words( get_the_content(), 15, '').'</p></div></a></div></div>';			
+<p class="p1" style="margin-bottom: 10px;">'.$content_data.'</p></div></a></div></div>';			
 
 
 endwhile;

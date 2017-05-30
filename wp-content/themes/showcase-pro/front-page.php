@@ -135,14 +135,14 @@ function showcase_front_page_resources() {
 	wp_reset_query();
 
 	// Employee handbook template
-	echo '<a href="https://joinair.staging.wpengine.com/free-employee-handbook-template/" class="front-page-resources-column">';
-	echo '<div class="front-page-resources-image" style="background-image: url(https://joinair.staging.wpengine.com/wp-content/uploads/2017/05/front-page-resources-employee-handbook-template.jpg)"><span class="front-page-resources-type">Free Template</span></div>';
+	echo '<a href="https://joinair.com/free-employee-handbook-template/" class="front-page-resources-column">';
+	echo '<div class="front-page-resources-image" style="background-image: url(https://joinair.com/wp-content/uploads/2017/05/front-page-resources-employee-handbook-template.jpg)"><span class="front-page-resources-type">Free Template</span></div>';
 	echo 'Improve onboarding and engagement of new employees with our Employee Handbook template.';
 	echo '<span class="front-page-resources-link">View template &rarr;</span></a>';
 
 	// All resources
-	echo '<a href="https://joinair.staging.wpengine.com/resources" class="front-page-resources-column">';
-	echo '<div class="front-page-resources-image" style="background-image: url(https://joinair.staging.wpengine.com/wp-content/uploads/2017/05/front-page-resources-view-all.jpg)"><span class="front-page-resources-type">Resources & Guides</span></div>';
+	echo '<a href="https://joinair.com/resources" class="front-page-resources-column">';
+	echo '<div class="front-page-resources-image" style="background-image: url(https://joinair.com/wp-content/uploads/2017/05/front-page-resources-view-all.jpg)"><span class="front-page-resources-type">Resources & Guides</span></div>';
 	echo 'Policies & templates covering all the needs of a growing company. Customizable and downloadable.';
 	echo '<span class="front-page-resources-link">View resources &rarr;</span></a>';
 

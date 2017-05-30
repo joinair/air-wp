@@ -36,7 +36,7 @@ add_action( 'wp_enqueue_scripts', 'showcase_scripts_styles' );
 function showcase_scripts_styles() {
 
 	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Lato:400,300,500,600,700', array(), CHILD_THEME_VERSION );
-	wp_enqueue_style( 'ionicons', '//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css', array(), CHILD_THEME_VERSION );
+	wp_enqueue_style( 'ionicons', get_stylesheet_directory_uri() . '/css/ionicons.min.css', array(), CHILD_THEME_VERSION );
 
 	wp_enqueue_script( 'showcase-fitvids', get_stylesheet_directory_uri() . '/js/jquery.fitvids.js', array(), CHILD_THEME_VERSION );
     wp_enqueue_script( 'showcase-global', get_stylesheet_directory_uri() . '/js/global.js', array(), CHILD_THEME_VERSION );

@@ -80,7 +80,7 @@ if( $related ) {
         $content_data= str_replace("[vc_row]","",$content_data);
    }
     $each_post_data.='<div class="wpb_column vc_col-sm-4"><div class="vc_column-inner blog_box resources_archive_block"><div class="wpb_wrapper"><div class=""><a href="'.get_the_permalink().'"><div class="blog_thumnail">'
-        . '<img class="aligncenter" height="65px" src="'.get_site_url().'/wp-content/uploads/2017/05/file_icon.png" />
+        . '<img class="aligncenter" width="41px" src="'.get_site_url().'/wp-content/themes/showcase-pro/images/resources_icon.png" />
        </div><div class="blog_details"><span class="time"></span><h5 class="p1" style="margin-bottom: 10px;">'.wp_trim_words( get_the_title(), 9, '').'</h5>
 <p class="p1" style="margin-bottom: 10px;">'.$content_data.'</p></div></a></div></div></div></div>';			
 

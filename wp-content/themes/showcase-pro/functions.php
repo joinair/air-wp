@@ -102,7 +102,7 @@ add_image_size( 'showcase_featured_posts', 600, 400, TRUE );
 add_image_size( 'showcase_archive', 900, 500, TRUE );
 add_image_size( 'showcase_team_thumb', 600, 800, TRUE );
 add_image_size( 'showcase_hero', 1920, 960, TRUE );
-add_image_size( 'showcase_blog_feature-custom', 800, 280, TRUE );
+add_image_size( 'showcase_blog_thumb', 400, 300, TRUE );
 
 
 /* ==========================================================================
@@ -446,7 +446,7 @@ function surefire_loop_helper_blog() {
 while(have_posts()) : the_post();
 set_post_thumbnail_size(262,150, true);
 $each_post_data.='<div class="fourth_column"><div class="blog_box"><a href="'.get_permalink().'" class="text-center read_more">'
-        . '<div class="blog_thumnail" style="background-size: cover; background-image:url('.get_the_post_thumbnail_url(get_the_ID(),"thumbnail-blogs").')"></div><div class="blog_details">
+        . '<div class="blog_thumnail" style="background-size: cover; background-image:url('.get_the_post_thumbnail_url(get_the_ID(),"showcase_blog_thumb").')"></div><div class="blog_details">
 <span class="time">'.get_the_date("d M Y").'</span><h5 class="p1" style="margin-bottom: 10px;">'.wp_trim_words( get_the_title(), 9, '...').'</h5>
 <p class="p1" style="margin-bottom: 36px;">'.wp_trim_words( get_the_content(), 15, '...').'</p><span class="read_text_link">Read post &#x2192;</span></div></a></div></div>';			
 
@@ -483,7 +483,7 @@ $content_data=wp_trim_words( get_the_content(), 18, '');
    }
    
 $each_post_data.='<div class="fourth_column"><div class="blog_box resources_archive_block"><a href="'.get_permalink().'"><div class="blog_thumnail">'
-        . '<img class="aligncenter" height="65px" src="'.get_site_url().'/wp-content/uploads/2017/05/file_icon.png" /><i class="fa fa-file-text-o" aria-hidden="true"></i>
+        . '<img class="aligncenter" width="41px" src="'.get_site_url().'/wp-content/themes/showcase-pro/images/resources_icon.png" /><i class="fa fa-file-text-o" aria-hidden="true"></i>
        </div><div class="blog_details"><span class="time"></span><h5 class="p1" style="margin-bottom: 10px;">'.wp_trim_words( get_the_title(), 9, '').'</h5>
 </div></a></div></div>';			
 
